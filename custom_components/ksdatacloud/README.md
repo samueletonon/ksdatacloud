@@ -31,7 +31,7 @@ Station ID: `2099123100000000`
 
 ### Sensors Created
 
-Each configured station creates 7 sensors:
+Each configured station creates 11 sensors:
 
 1. **PV Power** (W) - Current solar generation power
 2. **Battery State of Charge** (%) - Battery charge level
@@ -40,6 +40,10 @@ Each configured station creates 7 sensors:
 5. **Load Power** (W) - Home consumption power
 6. **Daily Generation** (kWh) - Total solar generation today
 7. **Daily Consumption** (kWh) - Total home consumption today
+8. **Daily Battery Charge** (kWh) - Total battery charged today
+9. **Daily Battery Discharge** (kWh) - Total battery discharged today
+10. **Daily Grid Import** (kWh) - Total grid imported today
+11. **Daily Grid Export** (kWh) - Total grid exported today
 
 ### Device Integration
 
@@ -97,7 +101,7 @@ For issues and feature requests, please open an issue on the GitHub repository.
 
 ## Version
 
-Current version: 0.1.0
+Current version: 0.3.0
 
 ## License
 

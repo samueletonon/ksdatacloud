@@ -6,7 +6,7 @@ The KS Data Cloud Home Assistant custom component has been successfully created 
 
 - ✅ 9 files created (~615 lines of code)
 - ✅ Async API client (aiohttp-based)
-- ✅ 7 sensor entities
+- ✅ 11 sensor entities
 - ✅ UI configuration flow
 - ✅ Energy dashboard compatibility
 - ✅ Device registry integration
@@ -83,7 +83,7 @@ docker restart <container_name>
 2. **Click "+ Add Integration"**
 3. **Search for "KS Data Cloud"**
 4. **Enter your credentials:**
-   - Email: `aaa@gmail.com`
+   - Email: `your@example.com`
    - Password: Your password
    - Station ID: `xxxxxxxxxx105859`
 
@@ -92,7 +92,7 @@ docker restart <container_name>
 The integration will:
 - Validate credentials
 - Fetch station data
-- Create 7 sensor entities
+- Create 11 sensor entities
 - Add device to registry
 
 ### 5. Verify Sensors Created
@@ -101,7 +101,7 @@ After adding the integration, check:
 
 **Settings → Devices & Services → KS Data Cloud → {Your Station}**
 
-You should see 7 sensors:
+You should see 11 sensors:
 1. ☀️  **PV Power** - Current solar generation
 2. 🔋 **Battery State of Charge** - Battery level
 3. 🔌 **Battery Power** - Charging/discharging
@@ -109,6 +109,10 @@ You should see 7 sensors:
 5. 🏠 **Load Power** - Home consumption
 6. 📊 **Daily Generation** - Solar production today
 7. 📊 **Daily Consumption** - Usage today
+8. 📊 **Daily Battery Charge** - Battery charged today
+9. 📊 **Daily Battery Discharge** - Battery discharged today
+10. 📊 **Daily Grid Import** - Grid imported today
+11. 📊 **Daily Grid Export** - Grid exported today
 
 ### 6. Energy Dashboard Integration
 
@@ -128,14 +132,14 @@ You should see 7 sensors:
 - [ ] No errors in Home Assistant logs
 
 ### Entity Creation
-- [ ] All 7 sensors created
+- [ ] All 11 sensors created
 - [ ] Sensor names include station name
 - [ ] Icons display correctly (solar, battery, grid, home)
 - [ ] Units are correct (W, %, kWh)
 
 ### Device Registry
 - [ ] Device created with station name
-- [ ] All 7 sensors grouped under device
+- [ ] All 11 sensors grouped under device
 - [ ] Device manufacturer: "KS Data Cloud"
 - [ ] Configuration URL links to dashboard
 
@@ -295,7 +299,7 @@ If you encounter issues:
 
 ✅ All 9 integration files created
 ✅ Async API client working and tested
-✅ 7 sensors defined with correct attributes
+✅ 11 sensors defined with correct attributes
 ✅ Config flow for UI setup
 ✅ Device registry integration
 ✅ Energy dashboard compatibility

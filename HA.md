@@ -16,7 +16,7 @@ The integration is **fully functional and ready to use**. All core files are in 
 | `const.py` — Constants and configuration | ✅ |
 | `api.py` — API client with async/await | ✅ |
 | `coordinator.py` — Data update coordinator | ✅ |
-| `sensor.py` — 7 sensor entities | ✅ |
+| `sensor.py` — 11 sensor entities | ✅ |
 | `exceptions.py` — Custom exceptions | ✅ |
 | `translations/en.json` — English translations | ✅ |
 | Config Flow — UI-based setup (no YAML needed) | ✅ |
@@ -66,7 +66,7 @@ cp -r custom_components/ksdatacloud /path/to/homeassistant/config/custom_compone
 
 **5. Complete setup**
 
-Click **Submit**. The integration will validate credentials and create 7 sensors grouped under one device.
+Click **Submit**. The integration will validate credentials and create 11 sensors grouped under one device.
 
 ---
 
@@ -86,7 +86,7 @@ Click **Submit**. The integration will validate credentials and create 7 sensors
 
 ## Sensors
 
-Once configured, each station creates 7 sensor entities grouped under one device:
+Once configured, each station creates 11 sensor entities grouped under one device:
 
 | Sensor | Unit | Description | Energy Dashboard |
 |--------|------|-------------|------------------|
@@ -263,4 +263,4 @@ async def async_get_config_entry_diagnostics(hass, entry) -> dict:
 
 ---
 
-**Version:** 0.2.0 | **Last Updated:** March 26, 2026
+**Version:** 0.3.0 | **Last Updated:** March 26, 2026
