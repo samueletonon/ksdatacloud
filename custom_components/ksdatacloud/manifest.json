@@ -1,0 +1,13 @@
+{
+  "domain": "ksdatacloud",
+  "name": "KS Data Cloud",
+  "codeowners": ["@stonon"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/stonon/ksdatacloud",
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/stonon/ksdatacloud/issues",
+  "requirements": ["aiohttp>=3.8.0"],
+  "version": "0.3.0"
+}

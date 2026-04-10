@@ -1,0 +1,44 @@
+# Credentials and secrets
+.env
+parameters.txt
+
+# Output data files
+stations_api_output.json
+stations_output.json
+!package.json
+!tsconfig.json
+!hacs.json
+!custom_components/**/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

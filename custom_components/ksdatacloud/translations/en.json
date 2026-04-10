@@ -1,0 +1,28 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "KS Data Cloud",
+        "description": "Enter your KS Data Cloud credentials and station ID",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "station_id": "Station ID"
+        },
+        "data_description": {
+          "username": "Your KS Data Cloud login email",
+          "password": "Your KS Data Cloud password",
+          "station_id": "The station ID from your KS Data Cloud dashboard"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid credentials. Please check your email and password.",
+      "cannot_connect": "Cannot connect to KS Data Cloud. Please check your internet connection and try again.",
+      "unknown": "An unexpected error occurred. Please try again."
+    },
+    "abort": {
+      "already_configured": "This station is already configured."
+    }
+  }
+}
