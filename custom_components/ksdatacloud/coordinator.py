@@ -9,7 +9,7 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, Upda
 
 from .api import KSDataCloudAPI
 from .const import DOMAIN, UPDATE_INTERVAL
-from .exceptions import KSDataCloudConnectionError
+from .exceptions import KSDataCloudAuthError, KSDataCloudConnectionError
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -39,5 +39,5 @@ class KSDataCloudCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             data = await self.api.async_get_station_data(self.station_id)
             _LOGGER.debug("Successfully updated station data for %s", self.station_id)
             return data
-        except KSDataCloudConnectionError as err:
+        except (KSDataCloudConnectionError, KSDataCloudAuthError) as err:
             raise UpdateFailed(f"Error communicating with API: {err}") from err

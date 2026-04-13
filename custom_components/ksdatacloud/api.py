@@ -39,7 +39,6 @@ class KSDataCloudAPI:
         try:
             payload = await response.json()
         except ValueError as err:
-            text = await response.text()
             raise KSDataCloudConnectionError(f"Invalid JSON: {err}") from err
 
         if response.status >= 400:
@@ -254,7 +253,9 @@ class KSDataCloudAPI:
             "devices": devices,
         }
 
-    async def async_get_station_data(self, station_id: str) -> dict[str, Any]:
+    async def async_get_station_data(
+        self, station_id: str, _retry: bool = True
+    ) -> dict[str, Any]:
         """Get all station data."""
         try:
             # Get station info first (has collect_ids)
@@ -281,8 +282,9 @@ class KSDataCloudAPI:
             )
 
         except KSDataCloudAuthError:
+            if not _retry:
+                raise
             # Token expired, try to re-login once
             _LOGGER.info("Token expired, re-authenticating")
             await self.async_login()
-            # Retry the request
-            return await self.async_get_station_data(station_id)
+            return await self.async_get_station_data(station_id, _retry=False)
